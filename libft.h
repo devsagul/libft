@@ -6,11 +6,14 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/01 18:32:47 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/01 18:33:59 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t len);
+#endif
