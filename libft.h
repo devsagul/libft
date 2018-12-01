@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/01 19:04:30 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/01 19:06:35 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_bzero(void *s, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 int		ft_isalpha(int c);
-int		ft_isgidit(int c);
+int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 #endif
