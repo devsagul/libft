@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/01 18:38:22 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/01 18:56:03 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t len);
-void	*ft_memcpy(void dst, const void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 #endif
