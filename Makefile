@@ -6,7 +6,7 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/01 18:26:12 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/01 18:31:25 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,4 +31,4 @@ clean:
 fclean: clean
 	rm -f $(TARGET)
 
-re: flean all
+re: fclean all
