@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:50:35 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/01 18:56:24 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/01 19:18:44 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		tmp_dst[i] = tmp_src[i];
 		if (tmp_dst[i] == ch)
-			break;
+			break ;
 		i++;
 	}
 	if (i == n)
