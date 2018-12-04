@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 19:31:31 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/04 21:26:57 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/04 21:43:36 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0' && s[i] != c1)
 		i++;
 	if (s[i] == c1)
-		return (s + i);
+		return ((char *)s + i);
 	return (NULL);
 }
