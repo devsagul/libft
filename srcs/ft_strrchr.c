@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 19:31:31 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/04 21:23:47 by mbalon-s         ###   ########.fr       */
+/*   Created: 2018/12/03 19:45:07 by mbalon-s          #+#    #+#             */
+/*   Updated: 2018/12/04 21:23:46 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*strrchr(const char *s, int c)
 {
-	size_t	i;
-	char	c1;
+	char	*res;
+	char	*tmp;
 
-	i = 0;
-	c1 = (char)c;
-	while (s[i] != '\0' && s[i] != c1)
-		i++;
-	if (s[i] == c1)
-		return (s + i);
-	return (NULL);
+	res = strchr(s, c);
+	if (res == NULL)
+		return (NULL);
+	tmp = strchr(res, c);
+	while (tmp != NULL)
+	{
+		res = tmp;
+		tmp = strchr(res, c);
+	}
+	return (res);
 }
