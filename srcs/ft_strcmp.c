@@ -6,14 +6,14 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 19:04:05 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/03 19:07:19 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/04 21:27:25 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int		strcmp(const char *s1, const char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 
