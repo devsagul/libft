@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 18:12:27 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/03 18:18:13 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/06 20:47:20 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char	*ft_strdup(const char *s1)
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (res == NULL)
 		return (NULL);
+	res[len] = '\0';
 	i = 0;
 	while (i < len)
 	{
