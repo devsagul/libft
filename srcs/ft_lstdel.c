@@ -1,11 +1,11 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_delone.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/06 19:11:30 by mbalon-s          #+#    #+#             */
+/*   Created: 2018/12/06 19:14:55 by mbalon-s          #+#    #+#             */
 /*   Updated: 2018/12/06 19:17:22 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -14,16 +14,8 @@
 #include <stdio.h>
 #include "libft.h"
 
-void	ft_delone(t_list **alst, void (*del) (void *, size_t))
+void	ft_lstdel(t_list **alst, void (*del) (void *, size_t))
 {
-	t_list	*next;
-
-	if (alst == NULL)
-		return ;
-	if (*alst == NULL)
-		return ;
-	del(*alst->content, *alst->content_size);
-	next = *alst;
-	free(*alst);
-	*alst = next;	
+	while (*alst != NULL)
+		ft_delone(alst, del);
 }
