@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:01:37 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/04 23:11:59 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/06 19:53:29 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char				**ft_strsplit(char const *s, char c)
 	{
 		while (s[index] == c)
 			index++;
-		res[i] = ft_substr(index, s - ft_strchr((char *)s + index, c) - 1);
+		res[i] = ft_strsub(s, index, s - ft_strchr((char *)s + index, c) - 1);
 		if (res[i] == NULL)
 		{
 			free_strtab(res, i);
@@ -52,6 +52,7 @@ static unsigned int	count_words(char const *s, char c)
 	unsigned int	i;
 	unsigned int	res;
 
+	res = 0;
 	in_word = 0;
 	i = 0;
 	while (s[i] != '\0')

@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 19:11:30 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/06 19:17:22 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/06 19:37:06 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_delone(t_list **alst, void (*del) (void *, size_t))
 		return ;
 	if (*alst == NULL)
 		return ;
-	del(*alst->content, *alst->content_size);
+	del((*alst)->content, (*alst)->content_size);
 	next = *alst;
 	free(*alst);
 	*alst = next;	

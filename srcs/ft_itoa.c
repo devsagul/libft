@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:14:44 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/04 23:19:30 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/06 19:37:31 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char				*ft_itoa(int n)
 	unsigned int	count;
 	char			*res;
 
-	count = count digits(n);
+	count = count_digits(n);
 	res = (char *)malloc(sizeof(char) * (count + 1));
 	if (res == NULL)
 		return (NULL);

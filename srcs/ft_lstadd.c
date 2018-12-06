@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 19:21:32 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/06 19:23:20 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/06 19:37:55 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (alist == NULL)
+	if (alst == NULL)
 		return ;
 	if (new == NULL)
 		return ;
