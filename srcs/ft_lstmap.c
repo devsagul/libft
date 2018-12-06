@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/12/06 19:28:44 by mbalon-s          #+#    #+#             */
+/*   Updated: 2018/12/06 19:34:43 by mbalon-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
+{
+	t_list	*res;
+	t_list	*tmp;
+
+	if (lst == NULL)
+		return NULL;
+	res = ft_lstnew(lst->content, lst->content_size);
+	lst = lst->next;
+	if (res == NULL)
+		return (NULL);
+	tmp = res;
+	while (lst != NULL)
+	{
+		tmp->next = ft_lstnew(lest->content, lst->content_size);
+		if (tmp->next == NULL)
+		{
+			ft_lstdel(res);
+			return (NULL);
+		}
+		lst = lst->next;
+		tmp = tmp->next;
+		tmp->next = NULL;
+	}
+	ft_lsiter(res);
+	return (res);
+}
