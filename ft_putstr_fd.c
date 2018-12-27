@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:45:56 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 16:20:15 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 21:24:31 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
 	size_t	len;
 

@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:25:02 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 19:45:20 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 21:24:06 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,5 @@
 
 void	ft_putstr(char const *s)
 {
-	size_t	len;
-
-	if (s == NULL)
-		return ;
-	len = ft_strlen(s);
-	write(1, s, len);
+	ft_putstr_fd(s, 1);
 }
