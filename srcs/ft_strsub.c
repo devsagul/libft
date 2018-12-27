@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 22:32:17 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 16:07:14 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 18:02:14 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (res == NULL)
 		return (NULL);
 	*res = '\0';
-	strncat(res, (char *)s + start, len);
+	ft_strncat(res, (char *)s + start, len);
 	res[len] = '\0';
 	return (res);
 }
