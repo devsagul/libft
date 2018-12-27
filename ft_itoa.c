@@ -6,12 +6,11 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:14:44 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 21:21:21 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 21:35:04 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static unsigned int	count_digits(int n)
@@ -54,7 +53,7 @@ char				*ft_itoa(int n)
 	}
 	while (n != 0)
 	{
-		res[count] = '0' + n > 0 ? n % 10 : (n % 10);
+		res[count] = '0' + n > 0 ? n % 10 : -(n % 10);
 		n /= 10;
 		count--;
 	}

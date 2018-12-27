@@ -6,12 +6,11 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:01:37 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 21:17:47 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 21:34:56 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static unsigned int	count_words(char const *s, char c)
