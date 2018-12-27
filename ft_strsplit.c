@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:01:37 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 20:03:49 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 21:17:47 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,16 @@ static char			**free_strtab(char **tab, unsigned int count)
 	return (NULL);
 }
 
+static unsigned int	get_word_len(char const *s, char c)
+{
+	char	*pos;
+
+	pos = ft_strchr(s, c);
+	if (pos == NULL)
+		return (ft_strlen(s));
+	return (pos - s);
+}
+
 char				**ft_strsplit(char const *s, char c)
 {
 	unsigned int	count;
@@ -70,7 +80,7 @@ char				**ft_strsplit(char const *s, char c)
 	{
 		while (*s == c)
 			s++;
-		w_len = ft_strchr(s, c) == NULL ? ft_strlen(s) : ft_strchr(s, c) - s;
+		w_len = get_word_len(s, c);
 		res[i] = ft_strsub(s, 0, w_len);
 		if (res[i] == NULL)
 			return (free_strtab(res, i));

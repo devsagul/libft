@@ -6,7 +6,7 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/27 20:11:32 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/27 21:15:16 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,23 @@ SRCS = ft_memset.c \
 	   ft_isascii.c \
 	   ft_isprint.c \
 	   ft_toupper.c \
-	   ft_tolower.c
+	   ft_tolower.c \
+	   ft_memalloc.c \
+	   ft_memdel.c \
+	   ft_strnew.c \
+	   ft_strdel.c \
+	   ft_strclr.c \
+	   ft_striter.c \
+	   ft_striteri.c \
+	   ft_strmap.c \
+	   ft_strmapi.c \
+	   ft_strequ.c \
+	   ft_strnequ.c \
+	   ft_strsub.c \
+	   ft_strjoin.c \
+	   ft_strtrim.c \
+	   ft_strsplit.c
+
 OBJ = $(notdir $(SRCS:.c=.o))
 FLAGS = -Wall -Wextra -Werror
 
