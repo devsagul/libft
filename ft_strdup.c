@@ -6,11 +6,10 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 18:12:27 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/06 20:47:20 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 20:31:55 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 

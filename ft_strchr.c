@@ -6,11 +6,10 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 19:31:31 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/04 21:43:36 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 20:33:26 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)

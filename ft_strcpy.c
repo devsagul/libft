@@ -6,11 +6,10 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 18:22:38 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/03 18:37:45 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 20:32:14 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)

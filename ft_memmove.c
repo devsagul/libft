@@ -6,11 +6,10 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/27 15:44:03 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 19:45:11 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 20:29:32 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -19,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*tmp_dst;
 	unsigned char	*tmp_src;
 
-	if (dst < src)
+	if (dst <= src)
 		return (ft_memcpy(dst, src, len));
 	tmp_dst = (unsigned char *)dst;
 	tmp_src = (unsigned char *)src;

@@ -6,11 +6,10 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 17:58:18 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/03 18:01:29 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 20:29:39 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
