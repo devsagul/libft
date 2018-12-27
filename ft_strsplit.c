@@ -6,54 +6,13 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 23:01:37 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 18:46:25 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 20:03:49 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include "libft.h"
-
-static unsigned int	count_words(char const *s, char c);
-static void			free_strtab(char **tab, unsigned int count);
-
-char				**ft_strsplit(char const *s, char c)
-{
-	unsigned int	count;
-	char			**res;
-	unsigned int	i;
-	unsigned int	w_len;
-	char			*locate;
-
-	if (s == NULL)
-		return (NULL);
-	count = count_words(s, c);
-	res = (char **)malloc(sizeof(char *) * count + 1);
-	if (res == NULL)
-		return (NULL);
-	res[count] = NULL;
-	i = 0;
-	while (i < count)
-	{
-		while (*s == c)
-			s++;
-		locate = ft_strchr(s, c);
-		if (locate != NULL)
-			w_len = locate - s;
-		else
-			w_len = ft_strlen(s);
-		res[i] = ft_strsub(s, 0, w_len);
-		s += w_len;
-		if (res[i] == NULL)
-		{
-			free_strtab(res, i);
-			free(res);
-			return (NULL);
-		}
-		i++;
-	}
-	return (res);
-}
 
 static unsigned int	count_words(char const *s, char c)
 {
@@ -78,7 +37,7 @@ static unsigned int	count_words(char const *s, char c)
 	return (res);
 }
 
-static void			free_strtab(char **tab, unsigned int count)
+static char			**free_strtab(char **tab, unsigned int count)
 {
 	unsigned int	i;
 
@@ -88,4 +47,35 @@ static void			free_strtab(char **tab, unsigned int count)
 		free(tab[i]);
 		i++;
 	}
+	free(tab);
+	return (NULL);
+}
+
+char				**ft_strsplit(char const *s, char c)
+{
+	unsigned int	count;
+	char			**res;
+	unsigned int	i;
+	unsigned int	w_len;
+
+	if (s == NULL)
+		return (NULL);
+	count = count_words(s, c);
+	res = (char **)malloc(sizeof(char *) * count + 1);
+	if (res == NULL)
+		return (NULL);
+	res[count] = NULL;
+	i = 0;
+	while (i < count)
+	{
+		while (*s == c)
+			s++;
+		w_len = ft_strchr(s, c) == NULL ? ft_strlen(s) : ft_strchr(s, c) - s;
+		res[i] = ft_strsub(s, 0, w_len);
+		if (res[i] == NULL)
+			return (free_strtab(res, i));
+		s += w_len;
+		i++;
+	}
+	return (res);
 }

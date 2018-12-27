@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 22:56:44 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 18:09:42 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 19:47:15 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ char	*ft_strtrim(char const *s)
 	while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
 		start++;
 	len = ft_strlen(s + start);
-	while ((s[start + len - 1] == ' ' || s[start + len - 1] == '\t' || s[start + len - 1] == '\n' || s[start + len - 1] == '\0') && len != 0)
+	while ((s[start + len - 1] == ' ' || s[start + len - 1] == '\t' ||
+			s[start + len - 1] == '\n' || s[start + len - 1] == '\0') &&
+			len != 0)
 		len--;
 	return (ft_strsub(s, start, len));
 }

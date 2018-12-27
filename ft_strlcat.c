@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 18:52:20 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/20 21:47:51 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 19:45:49 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 		len = size;
 		size = 0;
 	}
-	else	
+	else
 		size -= len;
 	len += ft_strlen(src);
 	i = 0;

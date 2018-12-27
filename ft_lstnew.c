@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 19:01:18 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 16:31:59 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/27 19:44:10 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		if (res->content == NULL)
 		{
 			free(res);
-			return NULL;
+			return (NULL);
 		}
 		res->content = ft_memcpy(res->content, content, content_size);
 		res->content_size = content_size;
