@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 21:47:33 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 21:27:42 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/29 23:18:45 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 char	*ft_strnew(size_t size)
 {
+	if (size + 1 == 0)
+		return (NULL);
 	return ((char *)ft_memalloc(size + 1));
 }
