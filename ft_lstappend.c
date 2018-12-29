@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/06 19:21:32 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/29 21:27:03 by mbalon-s         ###   ########.fr       */
+/*   Created: 2018/12/29 21:24:11 by mbalon-s          #+#    #+#             */
+/*   Updated: 2018/12/29 21:29:15 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstappend(t_list **alst, t_list *new)
 {
+	t_list	*tmp;
+
 	if (alst == NULL || new == NULL)
 		return ;
-	new->next = *alst;
-	*alst = new;
+	if (*alst == NULL)
+	{
+		*alst = new;
+		return ;
+	}
+	tmp = *alst;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = new;
 }

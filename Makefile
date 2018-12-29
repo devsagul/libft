@@ -6,7 +6,7 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/29 20:31:55 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/29 21:47:42 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,13 @@ SRCS = ft_memset.c \
 	   ft_lstdel.c \
 	   ft_lstadd.c \
 	   ft_lstiter.c \
-	   ft_lstmap.c
+	   ft_lstmap.c \
+	   ft_realloc.c \
+	   ft_lstappend.c \
+	   ft_lstsize.c \
+	   ft_createqueue.c \
+	   ft_queueadd.c \
+	   ft_queuepop.c
 
 OBJ = $(notdir $(SRCS:.c=.o))
 FLAGS = -Wall -Wextra -Werror

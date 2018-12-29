@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 21:25:13 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/29 21:44:59 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_queue
+{
+	t_list			*lst;
+	size_t			size;
+}					t_queue;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t len);
@@ -80,4 +86,11 @@ void				ft_lstdel(t_list **alst, void (*del) (void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
+void				*ft_realloc(void *mem, size_t size);
+void				ft_lstappend(t_list **alst, t_list *new);
+size_t				ft_lstsize(t_list *lst);
+t_queue				ft_createqueue(t_list *lst);
+void				ft_queueadd(t_queue *queue, t_list *new);
+t_list				*ft_queuepop(t_queue *queue);
+void				ft_delqueue(t_queue *queue, void (*del) (void *, size_t));
 #endif

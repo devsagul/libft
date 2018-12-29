@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_queueadd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/06 19:21:32 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/29 21:27:03 by mbalon-s         ###   ########.fr       */
+/*   Created: 2018/12/29 21:38:23 by mbalon-s          #+#    #+#             */
+/*   Updated: 2018/12/29 21:47:06 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void				ft_queueadd(t_queue *queue, t_list *new)
 {
-	if (alst == NULL || new == NULL)
-		return ;
-	new->next = *alst;
-	*alst = new;
+	ft_lstappend(&(queue->lst), new);
+	queue->size += ft_lstsize(new);
 }
