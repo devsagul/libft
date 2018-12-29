@@ -6,7 +6,7 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/29 21:47:42 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/29 22:43:14 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = libft
 TARGET = $(NAME).a
 HEADER = $(NAME).h
 
-#SRCS = $(shell find . -type f -name "*.c")
 SRCS = ft_memset.c \
 	   ft_bzero.c \
 	   ft_memcpy.c \
