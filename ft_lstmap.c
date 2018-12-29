@@ -6,15 +6,14 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 19:28:44 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 19:44:54 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/29 20:53:11 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-static void	ft_freelst(t_list *lst)
+static void		ft_freelst(t_list *lst)
 {
 	t_list	*tmp;
 
@@ -26,30 +25,31 @@ static void	ft_freelst(t_list *lst)
 	}
 }
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
+t_list			*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 {
 	t_list	*res;
+	t_list	*cur;
 	t_list	*tmp;
 
 	if (lst == NULL)
 		return (NULL);
-	res = ft_lstnew(lst->content, lst->content_size);
-	lst = lst->next;
-	if (res == NULL)
+	tmp = f(lst);
+	if (tmp == NULL)
 		return (NULL);
-	tmp = res;
+	res = tmp;
+	cur = res;
+	lst = lst->next;
 	while (lst != NULL)
 	{
-		tmp->next = ft_lstnew(lst->content, lst->content_size);
-		if (tmp->next == NULL)
+		tmp = f(lst);
+		if (tmp == NULL)
 		{
 			ft_freelst(res);
 			return (NULL);
 		}
+		cur->next = tmp;
+		cur = cur->next;
 		lst = lst->next;
-		tmp = tmp->next;
-		tmp->next = NULL;
 	}
-	ft_lstiter(res, f);
 	return (res);
 }
