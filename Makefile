@@ -6,13 +6,12 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/29 22:43:14 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/29 23:00:04 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
-TARGET = $(NAME).a
-HEADER = $(NAME).h
+NAME = libft.a
+HEADER = $(NAME:.a=.h)
 
 SRCS = ft_memset.c \
 	   ft_bzero.c \
@@ -84,15 +83,15 @@ FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(HEADER) $(SRCS)
+$(NAME):
 	gcc $(FLAGS) -I. -c $(SRCS)
-	ar -rc $(TARGET) $(OBJ)
-	ranlib $(TARGET)
+	ar -rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 re: fclean all
