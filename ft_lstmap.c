@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 19:28:44 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/29 20:53:11 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/29 23:12:38 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 			ft_freelst(res);
 			return (NULL);
 		}
-		cur->next = tmp;
+		cur->next = ft_lstnew(tmp->content, tmp->content_size);
 		cur = cur->next;
 		lst = lst->next;
 	}
