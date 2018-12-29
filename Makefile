@@ -6,7 +6,7 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/27 21:44:36 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/29 20:20:32 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,12 @@ SRCS = ft_memset.c \
 	   ft_putchar_fd.c \
 	   ft_putstr_fd.c \
 	   ft_putendl_fd.c \
-	   ft_putnbr_fd.c
+	   ft_putnbr_fd.c \
+	   ft_lstnew.c \
+	   ft_lstdelone.c \
+	   ft_lstdel.c \
+	   ft_lstadd.c \
+	   ft_lstiter.c
 
 OBJ = $(notdir $(SRCS:.c=.o))
 FLAGS = -Wall -Wextra -Werror
