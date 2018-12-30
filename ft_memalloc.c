@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 21:38:25 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/29 23:19:26 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/30 15:58:59 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	*ft_memalloc(size_t size)
 	res = malloc(size);
 	if (res == NULL)
 		return (NULL);
-	ft_memset(res, 0, size);
+	ft_bzero(res, size);
 	return (res);
 }
