@@ -6,7 +6,7 @@
 #    By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2018/12/29 23:00:04 by mbalon-s         ###   ########.fr        #
+#    Updated: 2018/12/30 16:16:11 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ SRCS = ft_memset.c \
 	   ft_queuepop.c
 
 OBJ = $(notdir $(SRCS:.c=.o))
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -O3
 
 all: $(NAME)
 
