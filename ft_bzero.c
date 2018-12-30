@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:29:43 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 20:29:17 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2018/12/30 16:48:29 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	size_t	i;
+	char	*mas;
+
+	mas = (char *)s;
+	i = 0;
+	while (i < n)
+	{
+		mas[i] = 0;
+		i++;
+	}
 }
