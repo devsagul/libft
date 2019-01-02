@@ -6,7 +6,7 @@
 /*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 18:08:48 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/27 20:31:39 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/02 20:55:00 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	char *tmp;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	tmp = (char *)s;
+	while (*tmp != '\0')
+		tmp++;
+	return (tmp - s);
 }
