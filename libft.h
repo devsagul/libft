@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 21:57:04 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 22:39:54 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,7 +134,7 @@ size_t				ft_lstlength(t_list *lst);
 /* queue */
 t_queue				ft_queuecreate(void);
 void				ft_queueappend(t_queue *queue, t_list *item);
-t_list				ft_queuepop(t_queue *queue);
+t_list				*ft_queuepop(t_queue *queue);
 void				ft_queuefree(t_queue *queue, void (*del) (void *, size_t));
 /* stack */
 
