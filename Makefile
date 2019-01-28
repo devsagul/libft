@@ -6,7 +6,7 @@
 #    By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2019/01/28 21:54:48 by mbalon-s         ###   ########.fr        #
+#    Updated: 2019/01/28 22:05:24 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ SRCS = ft_memset.c \
 	   ft_lstadd.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
+	   ft_lstlength.c \
 	   ft_queuecreate.c
 
 OBJ = $(SRCS:.c=.o)
