@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 21:55:50 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 22:12:23 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 22:12:59 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,5 @@ void				ft_queueappend(t_queue *queue, t_list *item)
     queue->size += ft_lstlength(item);
     queue->tail = item;
     while (queue->tail->next != NULL)
-    {
         queue->tail = queue->tail->next;
-    }
 }
