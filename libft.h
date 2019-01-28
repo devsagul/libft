@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 21:51:21 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:57:04 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ void				ft_lstdel(t_list **alst, void (*del) (void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
+size_t				ft_lstlength(t_list *lst);
 /* queue */
 t_queue				ft_queuecreate(void);
 void				ft_queueappend(t_queue *queue, t_list *item);

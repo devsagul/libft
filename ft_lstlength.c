@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_queuecreate.c                                   :+:      :+:    :+:   */
+/*   ft_lstlength.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/28 21:41:59 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 22:04:31 by mbalon-s         ###   ########.fr       */
+/*   Created: 2019/01/28 22:02:55 by mbalon-s          #+#    #+#             */
+/*   Updated: 2019/01/28 22:04:51 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_queue				ft_queuecreate(void)
+size_t				ft_lstlength(t_list *lst)
 {
-    t_queue res;
+    size_t  res;
 
-    res.size = 0;
-    res.head = NULL;
-    res.tail = NULL;
+    if (lst == NULL)
+        return (0);
+    res = 0;
+    while (lst->next != NULL)
+        res++;
     return (res);
 }
