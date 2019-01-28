@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/02 20:55:29 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 19:53:56 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,53 @@ typedef struct		s_list
 
 typedef struct		s_queue
 {
-	t_list			*lst;
 	size_t			size;
+	t_list			*head;
+	t_list			*tail;
 }					t_queue;
+
+typedef struct		s_stack
+{
+	size_t			size;
+	t_list			*head;
+}					t_stack;
+
+typedef struct		s_dllist
+{
+	void			*content;
+	size_t			content_size;
+	struct s_dllist	*next;
+	struct s_dllist	*prev;
+}					t_dllist;
+
+typedef struct		s_deque
+{
+	size_t			size;
+	t_dllist		*head;
+	t_dllist		*tail;
+}					t_deque;
+
+typedef	struct		s_imatrix
+{
+	size_t			n;
+	size_t			m;
+	int				*values;
+}					t_imatrix;
+
+typedef struct		s_fmatrix
+{
+	size_t			n;
+	size_t			m;
+	double			*values
+}					t_fmatrix;
+
+typedef struct		s_hashmap
+{
+	size_t			modulo;
+	size_t			size;
+	unsigned int	(*hash) (const void *, size_t len);
+	t_queue			*values;
+};
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t len);
@@ -86,10 +130,11 @@ void				ft_lstdel(t_list **alst, void (*del) (void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f) (t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem));
-void				ft_lstappend(t_list **alst, t_list *new);
-size_t				ft_lstsize(t_list *lst);
-t_queue				ft_createqueue(t_list *lst);
-void				ft_queueadd(t_queue *queue, t_list *new);
-t_list				*ft_queuepop(t_queue *queue);
-void				ft_delqueue(t_queue *queue, void (*del) (void *, size_t));
+/* queue */
+/* stack */
+/* dllist */
+/* deque */
+/* imatrix */
+/* fmatrix */
+/* hashmap */
 #endif
