@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 21:50:34 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:51:21 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ typedef struct		s_hashmap
 	size_t			size;
 	unsigned int	(*hash) (const void *, size_t len);
 	t_queue			*values;
-};
+}					t_hashmap;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t len);
