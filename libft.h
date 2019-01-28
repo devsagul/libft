@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 21:25:56 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 21:50:34 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ typedef struct		s_fmatrix
 {
 	size_t			n;
 	size_t			m;
-	double			*values
+	double			*values;
 }					t_fmatrix;
 
 typedef struct		s_hashmap
