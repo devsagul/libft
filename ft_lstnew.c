@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbalon-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 19:01:18 by mbalon-s          #+#    #+#             */
-/*   Updated: 2018/12/30 15:57:34 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 22:30:44 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		res->content = ft_memcpy(res->content, content, content_size);
 		res->content_size = content_size;
 	}
+	res->next = NULL;
 	return (res);
 }
