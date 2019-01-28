@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 22:33:29 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 22:46:38 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/28 23:35:06 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,9 @@ t_list				*ft_queuepop(t_queue *queue)
     queue->head = res->next;
     res->next = NULL;
     queue->size--;
+    if (queue->size == 0)
+    {
+        queue->tail = NULL;
+    }
     return (res);
 }
