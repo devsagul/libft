@@ -6,7 +6,7 @@
 #    By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2019/01/29 17:00:20 by mbalon-s         ###   ########.fr        #
+#    Updated: 2019/01/29 17:11:49 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,8 @@ SRCS = ft_memset.c \
 	   ft_queuefree.c \
 	   ft_stackcreate.c \
 	   ft_stackadd.c \
-	   ft_stackpop.c
+	   ft_stackpop.c \
+	   ft_stackadd.c
 
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
