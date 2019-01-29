@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 16:47:45 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/29 16:58:32 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ void				ft_queuefree(t_queue *queue, void (*del) (void *, size_t));
 /* stack */
 t_stack				ft_stackcreate(void);
 void				ft_stackadd(t_stack *stack, t_list *item);
+t_list				*ft_stackpop(t_stack *stack);
 /* dllist */
 /* deque */
 /* imatrix */
