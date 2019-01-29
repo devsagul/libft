@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 20:36:21 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/29 20:46:17 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,7 @@ void				ft_stackfree(t_stack *stack, void (*del) (void *, size_t));
 int					ft_iround(double x);
 /* imatrix */
 t_imatrix			ft_imatrixtheta(size_t n, size_t m);
+t_imatrix			ft_imatrixidentity(size_t n);
 void				ft_imatrixfree(t_imatrix *matrix);
 /* fmatrix */
 t_fmatrix			ft_fmatrixtheta(size_t n, size_t m);
