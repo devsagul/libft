@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 17:45:59 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/29 18:11:29 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,21 +33,6 @@ typedef struct		s_stack
 	size_t			size;
 	t_list			*head;
 }					t_stack;
-
-typedef struct		s_dllist
-{
-	void			*content;
-	size_t			content_size;
-	struct s_dllist	*next;
-	struct s_dllist	*prev;
-}					t_dllist;
-
-typedef struct		s_deque
-{
-	size_t			size;
-	t_dllist		*head;
-	t_dllist		*tail;
-}					t_deque;
 
 typedef	struct		s_imatrix
 {
@@ -139,12 +124,8 @@ t_stack				ft_stackcreate(void);
 void				ft_stackadd(t_stack *stack, t_list *item);
 t_list				*ft_stackpop(t_stack *stack);
 void				ft_stackfree(t_stack *stack, void (*del) (void *, size_t));
-/* dllist */
-t_dllist			*ft_dllstnew(void const *content, size_t content_size);
-/* deque */
+int					ft_iround(double x);
 /* imatrix */
-/* round */
 /* fmatrix */
 /* hashmap */
-/* reduce? */
 #endif
