@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 20:49:28 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 20:58:24 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/29 21:00:58 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ t_imatrix			ft_imatrixidentity(size_t n)
 	size_t		size;
 	size_t		i;
 
-	size = n * n;
+	size = n * n * sizeof(int);
 	res.n = 0;
 	res.m = 0;
-	if (size == 0 || size / n != n)
+	if (size == 0 || size / n != n * sizeof(int))
 	{
 		res.values = NULL;
 		return (res);
