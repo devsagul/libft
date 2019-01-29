@@ -6,10 +6,11 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 17:51:02 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 17:53:50 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/29 17:54:36 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 t_dllist			*ft_dllstnew(void const *content, size_t content_size)
