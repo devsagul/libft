@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 17:06:32 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/29 17:45:59 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,14 +135,16 @@ t_queue				ft_queuecreate(void);
 void				ft_queueappend(t_queue *queue, t_list *item);
 t_list				*ft_queuepop(t_queue *queue);
 void				ft_queuefree(t_queue *queue, void (*del) (void *, size_t));
-/* stack */
 t_stack				ft_stackcreate(void);
 void				ft_stackadd(t_stack *stack, t_list *item);
 t_list				*ft_stackpop(t_stack *stack);
 void				ft_stackfree(t_stack *stack, void (*del) (void *, size_t));
 /* dllist */
+t_dllist			*ft_dllstnew(void const *content, size_t content_size);
 /* deque */
 /* imatrix */
+/* round */
 /* fmatrix */
 /* hashmap */
+/* reduce? */
 #endif
