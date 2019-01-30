@@ -6,7 +6,7 @@
 #    By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2019/01/30 20:16:12 by mbalon-s         ###   ########.fr        #
+#    Updated: 2019/01/30 20:21:36 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,7 +93,8 @@ SRCS = ft_memset.c \
 	   ft_fmatrixtheta.c \
 	   ft_fmatrixidentity.c \
 	   ft_fmatrixget.c \
-	   ft_fmatrixset.c
+	   ft_fmatrixset.c \
+	   ft_fmatrixadd.c
 
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 20:04:36 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 20:21:13 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,9 +141,9 @@ t_fmatrix			ft_fmatrixtheta(size_t n, size_t m);
 t_fmatrix			ft_fmatrixidentity(size_t n);
 int					ft_fmatrixget(t_fmatrix matrix,
 									size_t i, size_t j, double *value);
-//int					ft_imatrixset(t_fmatrix matrix,
-//									size_t i, size_t j, double value);
-//t_fmatrix			ft_fmatrixadd(t_fmatrix a, t_fmatrix b);
+int					ft_fmatrixset(t_fmatrix matrix,
+									size_t i, size_t j, double value);
+t_fmatrix			ft_fmatrixadd(t_fmatrix a, t_fmatrix b);
 //t_fmatrix			ft_fmatrixsub(t_fmatrix a, t_fmatrix b);
 //t_fmatrix			ft_fmatrixmul(t_fmatrix a, t_fmatrix b);
 //t_fmatrix			ft_fmatrixtranspose(t_fmatrix a);
