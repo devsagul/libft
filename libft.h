@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 18:40:04 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 19:02:44 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,6 @@ void				ft_stackadd(t_stack *stack, t_list *item);
 t_list				*ft_stackpop(t_stack *stack);
 void				ft_stackfree(t_stack *stack, void (*del) (void *, size_t));
 int					ft_iround(double x);
-/* imatrix */
 t_imatrix			ft_imatrixtheta(size_t n, size_t m);
 t_imatrix			ft_imatrixidentity(size_t n);
 int					ft_imatrixget(t_imatrix matrix,
@@ -139,7 +138,10 @@ t_imatrix			ft_imatrixtranspose(t_imatrix a);
 void				ft_imatrixfree(t_imatrix *matrix);
 /* fmatrix */
 t_fmatrix			ft_fmatrixtheta(size_t n, size_t m);
-void				ft_fmatrixfree(t_fmatrix *matrix);
+//void				ft_fmatrixfree(t_fmatrix *matrix);
+//
+//t_imatrix			ft_fmatrix2imatrix(t_fmatrix matrix);
+//t_fmatrix			ft_imatrix2fmatrix(t_imatrix matrix);
 /* hashmap */
 // get
 // set
