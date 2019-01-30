@@ -6,7 +6,7 @@
 #    By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 18:05:26 by mbalon-s          #+#    #+#              #
-#    Updated: 2019/01/30 18:08:08 by mbalon-s         ###   ########.fr        #
+#    Updated: 2019/01/30 18:39:12 by mbalon-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,8 @@ SRCS = ft_memset.c \
 	   ft_imatrixset.c \
 	   ft_imatrixadd.c \
 	   ft_imatrixsub.c \
-	   ft_imatrixmul.c
+	   ft_imatrixmul.c \
+	   ft_imatrixtranspose.c
 
 OBJ = $(SRCS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
