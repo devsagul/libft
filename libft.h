@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 18:27:58 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 18:40:04 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,11 +132,11 @@ int					ft_imatrixget(t_imatrix matrix,
 									size_t i, size_t j, int *value);
 int					ft_imatrixset(t_imatrix matrix,
 									size_t i, size_t j, int value);
-void				ft_imatrixfree(t_imatrix *matrix);
 t_imatrix			ft_imatrixadd(t_imatrix a, t_imatrix b);
 t_imatrix			ft_imatrixsub(t_imatrix a, t_imatrix b);
 t_imatrix			ft_imatrixmul(t_imatrix a, t_imatrix b);
 t_imatrix			ft_imatrixtranspose(t_imatrix a);
+void				ft_imatrixfree(t_imatrix *matrix);
 /* fmatrix */
 t_fmatrix			ft_fmatrixtheta(size_t n, size_t m);
 void				ft_fmatrixfree(t_fmatrix *matrix);
