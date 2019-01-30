@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 18:08:26 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 21:00:29 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 21:02:52 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static double		ft_addrow(t_fmatrix a, t_fmatrix b,
 	return (res);
 }
 
-t_fmatrix			ft_imatrixmul(t_fmatrix a, t_fmatrix b)
+t_fmatrix			ft_fmatrixmul(t_fmatrix a, t_fmatrix b)
 {
 	t_fmatrix	res;
 	size_t		i;
