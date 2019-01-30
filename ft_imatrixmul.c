@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 18:08:26 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 18:09:04 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 18:09:50 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ t_imatrix			ft_imatrixmul(t_imatrix a, t_imatrix b)
 {
 	if (a.m != b.n)
 		return (ft_imatrixidentity(0));
+	return (ft_imatrixidentity(1));
 }
