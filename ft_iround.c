@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 18:10:13 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/29 18:11:17 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 17:55:41 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int					ft_iround(double x)
 {
-    if (x == 0)
-        return (0);
-    if (x > 0)
-        return ((int)(x + 0.5));
-    return ((int)(x - 0.5));
+	if (x == 0)
+		return (0);
+	if (x > 0)
+		return ((int)(x + 0.5));
+	return ((int)(x - 0.5));
 }

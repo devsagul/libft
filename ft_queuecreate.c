@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/28 21:41:59 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/28 22:04:31 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 17:56:56 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 t_queue				ft_queuecreate(void)
 {
-    t_queue res;
+	t_queue	res;
 
-    res.size = 0;
-    res.head = NULL;
-    res.tail = NULL;
-    return (res);
+	res.size = 0;
+	res.head = NULL;
+	res.tail = NULL;
+	return (res);
 }
