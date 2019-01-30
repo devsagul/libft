@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 20:29:49 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 20:58:48 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ int					ft_fmatrixset(t_fmatrix matrix,
 									size_t i, size_t j, double value);
 t_fmatrix			ft_fmatrixadd(t_fmatrix a, t_fmatrix b);
 t_fmatrix			ft_fmatrixsub(t_fmatrix a, t_fmatrix b);
-//t_fmatrix			ft_fmatrixmul(t_fmatrix a, t_fmatrix b);
+t_fmatrix			ft_fmatrixmul(t_fmatrix a, t_fmatrix b);
 //t_fmatrix			ft_fmatrixtranspose(t_fmatrix a);
 //void				ft_fmatrixfree(t_fmatrix *matrix);
 //
