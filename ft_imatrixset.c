@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/30 17:08:52 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/30 17:15:01 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/30 17:16:35 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int		ft_imatrixset(t_imatrix matrix, size_t i, size_t j, int value)
 {
 	if (i >= matrix.n || j >= matrix.m)
 		return (0);
-	matrix.values[j * matrix.m + i] = value;
+	matrix.values[i * matrix.m + j] = value;
 	return (1);
 }
