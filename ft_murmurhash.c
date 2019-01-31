@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 16:23:58 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/31 16:44:42 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/31 16:48:27 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ unsigned int		ft_murmurhash(const void *key, size_t len,
 	while (len >= 4)
 	{
 		k = *(unsigned int *)data;
-		nmix(&seed, &k);
+		ft_nmix(&seed, &k);
 		data += 4;
 		len -= 4;
 	}
@@ -43,8 +43,8 @@ unsigned int		ft_murmurhash(const void *key, size_t len,
 		t ^= data[1] << 8;
 	if (len >= 1)
 		t ^= data[0];
-	mmix(&seed, &t);
-	mmix(&seed, &len);
+	ft_mmix(&seed, &t);
+	ft_mmix(&seed, &len);
 	seed ^= seed >> 13;
 	seed *= MURMURMAGIC;
 	seed ^= seed >> 15;
