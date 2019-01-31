@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/31 17:32:02 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/31 17:38:39 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,22 +50,6 @@ typedef struct		s_fmatrix
 	size_t			m;
 	double			*values;
 }					t_fmatrix;
-
-typedef struct		s_hashmap
-{
-	size_t			modulo;
-	unsigned int	size;
-	unsigned int	(*hash) (const void *, unsigned int);
-	t_queue			*values;
-}					t_hashmap;
-
-typedef struct		s_kvpair
-{
-	void			*key;
-	size_t			keysize;
-	void			*value;
-	size_t			valuesize;
-}					t_kvpair;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t len);
@@ -162,19 +146,7 @@ t_imatrix			ft_fmatrix2imatrix(t_fmatrix matrix);
 t_fmatrix			ft_imatrix2fmatrix(t_imatrix matrix);
 t_list				*ft_lstsearch(t_list *lst, t_list *ref,
 									int (*cmp) (t_list *item, t_list *ref));
-/* kv */
-t_kvpair			ft_kvpaircreate(void const *key, size_t keysize,
-									void const *value, size_t valuesize);
-// delete
-// compare
-/* hashmap */
 unsigned int		ft_murmurhash(const void *key, unsigned int len,
 									unsigned int seed);
 unsigned int		ft_murmurhashz(const void *key, unsigned int len);
-t_hashmap			ft_hashmapnew(size_t modulo, unsigned int size,
-						unsigned int (*hash) (const void *, unsigned int));
-// set
-// get
-// delete
-// free
 #endif
