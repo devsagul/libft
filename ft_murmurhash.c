@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/31 16:23:58 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/31 16:49:39 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/31 16:50:26 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void			ft_nmix(unsigned int *h, unsigned int *k)
 	*h ^= *k;
 }
 
-unsigned int		ft_murmurhash(const void *key, size_t len,
+unsigned int		ft_murmurhash(const void *key, unsigned int len,
 									unsigned int seed)
 {
 	unsigned char	*data;
