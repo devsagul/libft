@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/31 16:53:19 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/31 17:19:08 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ typedef struct		s_fmatrix
 typedef struct		s_hashmap
 {
 	size_t			modulo;
-	size_t			size;
-	unsigned int	(*hash) (const void *, size_t);
+	unsigned int	size;
+	unsigned int	(*hash) (const void *, unsigned int);
 	t_queue			*values;
 }					t_hashmap;
 
@@ -139,7 +139,6 @@ t_imatrix			ft_imatrixsub(t_imatrix a, t_imatrix b);
 t_imatrix			ft_imatrixmul(t_imatrix a, t_imatrix b);
 t_imatrix			ft_imatrixtranspose(t_imatrix a);
 void				ft_imatrixfree(t_imatrix *matrix);
-/* fmatrix */
 t_fmatrix			ft_fmatrixtheta(size_t n, size_t m);
 t_fmatrix			ft_fmatrixidentity(size_t n);
 int					ft_fmatrixget(t_fmatrix matrix,
@@ -153,11 +152,19 @@ t_fmatrix			ft_fmatrixtranspose(t_fmatrix a);
 void				ft_fmatrixfree(t_fmatrix *matrix);
 t_imatrix			ft_fmatrix2imatrix(t_fmatrix matrix);
 t_fmatrix			ft_imatrix2fmatrix(t_imatrix matrix);
+// lstsearch
+/* kv */
+// create
+// delete
+// compare
 /* hashmap */
 unsigned int		ft_murmurhash(const void *key, unsigned int len,
 									unsigned int seed);
 unsigned int		ft_murmurhashz(const void *key, unsigned int len);
-// get
+t_hashmap			ft_hashmapnew(size_t modulo, unsigned int size,
+						unsigned int (*hash) (const void *, unsigned int));
 // set
+// get
 // delete
+// free
 #endif

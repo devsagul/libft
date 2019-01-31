@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_imatrix2fmatrix.c                               :+:      :+:    :+:   */
+/*   ft_hashmapnew.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/30 23:31:34 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/31 17:19:39 by mbalon-s         ###   ########.fr       */
+/*   Created: 2019/01/31 17:11:39 by mbalon-s          #+#    #+#             */
+/*   Updated: 2019/01/31 17:18:07 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-t_fmatrix			ft_imatrix2fmatrix(t_imatrix matrix)
+t_hashmap			ft_hashmapnew(size_t modulo, unsigned int size,
+						unsigned int (*hash) (const void *, unsigned int))
 {
-	t_fmatrix	res;
-	size_t		i;
-	size_t		j;
-	int			value;
+	t_hashmap	res;
+	size_t		length;
 
-	if (matrix.values == NULL)
-		return (ft_fmatrixidentity(0));
-	res = ft_fmatrixtheta(matrix.n, matrix.m);
+	ft_memset(&res, 0, sizeof(t_hashmap));
+	if (modulo == 0 || hash == NULL)
+		return (res);
+	length = modulo * sizeof(t_queue);
+	if (length / sizeof(t_queue) != modulo)
+		return (res);
+	res.values = (t_queue *)malloc(length);
 	if (res.values == NULL)
 		return (res);
-	i = 0;
-	while (i < matrix.n)
-	{
-		j = 0;
-		while (j < matrix.m)
-		{
-			ft_imatrixget(matrix, i, j, &value);
-			ft_fmatrixset(res, i, j, value);
-			j++;
-		}
-		i++;
-	}
+	res.hash = hash;
+	res.modulo = modulo;
+	res.size = size;
 	return (res);
 }
