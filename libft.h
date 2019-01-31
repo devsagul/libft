@@ -6,7 +6,7 @@
 /*   By: mbalon-s <mbalon-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 18:14:51 by mbalon-s          #+#    #+#             */
-/*   Updated: 2019/01/31 16:50:46 by mbalon-s         ###   ########.fr       */
+/*   Updated: 2019/01/31 16:53:19 by mbalon-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,7 @@ t_fmatrix			ft_imatrix2fmatrix(t_imatrix matrix);
 /* hashmap */
 unsigned int		ft_murmurhash(const void *key, unsigned int len,
 									unsigned int seed);
+unsigned int		ft_murmurhashz(const void *key, unsigned int len);
 // get
 // set
 // delete
